@@ -1,4 +1,4 @@
-import faker from 'faker';
+import * as faker from 'faker';
 
 export class User {
   name: string;
@@ -13,5 +13,9 @@ export class User {
       lat: parseFloat(faker.address.latitude()),
       lng: parseFloat(faker.address.longitude())
     };
+  }
+
+  markerContent(): string {
+    return `User name: ${this.name}`
   }
 }
